@@ -3,7 +3,15 @@
 
 
 from setuptools import setup
+import os
 
+os.system('cp config/.lircrc ~/.lircrc')
+os.system('cp config/hardware.conf /etc/lirc/hardware.conf')
+os.system('cp config/lircd.conf /etc/lirc/lircd.conf')
+os.system('cp config/lircmd.conf /etc/lirc/lircmd.conf')
+
+os.system('mkdir ~/.slightgen')
+os.system('cp img/logo.png ~/.slightgen/logo.png')
 
 setup(
     name='SG-remote',

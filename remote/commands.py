@@ -128,7 +128,8 @@ def enter():
     p.press('\n')
 
 def F5():
-    p.press('f5 pressed')
+    notify('F5 pressed')
+    p.press('f5')
 
 def backspace():
     p.press('\b')

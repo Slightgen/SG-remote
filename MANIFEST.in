@@ -1,2 +1,2 @@
 include MANIFEST.in README.md remote.py setup.py LICENSE setup.py
-recursive-include remote *.py
+recursive-include remote config img *.py *.*

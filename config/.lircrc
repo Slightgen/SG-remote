@@ -1,0 +1,190 @@
+begin
+	prog = remote
+	button = KEY_POWER
+	config = power
+	repeat = 0
+end
+
+
+
+begin
+	prog = remote
+	button = BTN_LEFT
+	config = left
+	repeat = 0
+end
+
+
+
+begin
+	prog = remote
+	button = BTN_RIGHT
+	config = right
+	repeat = 0
+end
+
+
+
+begin
+	prog = remote
+	button = BTN_FORWARD
+	config = up
+	repeat = 0
+end
+
+
+
+begin
+	prog = remote
+	button =  BTN_BACK
+	config = down
+	repeat = 0
+end
+
+
+
+begin
+	prog = remote
+	button = BTN_MODE
+	config = enter
+	repeat = 0
+end
+
+
+
+begin
+	prog = remote
+	button = KEY_ESC
+	config = escape
+	repeat = 0
+end
+
+
+
+begin
+	prog = remote
+	button = KEY_TAB
+	config = tab
+	repeat = 0
+end
+
+
+
+begin
+	prog = remote
+	button = KEY_PAGEUP
+	config = pageup
+	repeat = 0
+end
+
+
+
+begin
+	prog = remote
+	button = KEY_PAGEDOWN
+	config = pagedown
+	repeat = 0
+end
+
+
+
+begin
+	prog = remote
+	button = KEY_CLOSE
+	config = close
+	repeat = 0
+end
+
+
+
+begin
+	prog = remote
+	button = KEY_F5
+	config = F5
+	repeat = 0
+end
+
+
+
+begin
+	prog = remote
+	button = KEY_COPY
+	config = copy
+	repeat = 0
+end
+
+
+
+begin
+	prog = remote
+	button = KEY_PASTE
+	config = paste
+	repeat = 0
+end
+
+
+begin
+	prog = remote
+	button = BTN_1
+	config = alt_tab
+	repeat = 0
+end
+
+
+
+begin
+	prog = remote
+	button = KEY_HOME
+	config = home
+	repeat = 0
+end
+
+
+
+begin
+	prog = remote
+	button = KEY_END
+	config = end
+	repeat = 0
+end
+
+
+
+begin
+	prog = remote
+	button = BTN_0
+	config = show_desktop
+	repeat = 0
+end
+
+
+
+begin
+	prog = remote
+	button = BTN_2
+	config = fileviewer
+	repeat = 0
+end
+
+
+
+begin
+	prog = remote
+	button = KEY_CUT
+	config = cut
+	repeat = 0
+end
+
+begin
+	prog = remote
+	button = BTN_EXTRA
+	config = backspace
+	repeat = 0
+end
+
+begin
+	prog = remote
+	button = BTN_4
+	config = startup_menu
+	repeat = 0
+end
