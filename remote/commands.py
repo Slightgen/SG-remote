@@ -1,0 +1,138 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+import pyautogui as p
+from threading import Thread
+import os
+
+def showShutdown():
+    
+    os.system('mate-session-save --shutdown-dialog')
+
+def run(program , *arg):
+    pid = os.fork()
+    if not pid:
+        print type(arg)
+        os.execvp(program,(program,)+arg)
+    return os.wait()[0]
+
+
+def power():
+    """
+    this method minimizes all the windows and shows the shutdown
+    dialog box.
+    """
+    show_desktop()
+    t = Thread(target= showShutdown)
+    t.start()
+
+def fileviewer():
+    """
+    this method starts a new instance of the file manager at
+    at location /media/ .
+    .. note
+        
+        here in this case the default filemanager is caja.
+        so this will start caja at /media/
+    """
+    program = 'caja'
+    arg =  '/media/'
+    run(program , arg)
+
+def show_desktop():
+    """
+    this method minimizes all the opened windows and will show
+    the desktop.
+    """
+    p.keyDown('alt')
+    p.keyDown('ctrl')
+    p.keyDown('d')
+    p.keyUp('d')
+    p.keyUp('ctrl')
+    p.keyUp('alt')
+
+def alt_tab():
+    """
+    this method takes the control to the previously 
+    opened window.
+    """
+    p.keyDown('alt')
+    p.keyDown('shift')
+    p.keyDown('\t')
+    p.keyUp('\t')
+    p.keyUp('shift')
+    p.keyUp('alt')
+
+def close():
+    """
+    this method presses alt+f4 of the virtual key board.
+    """
+    p.keyDown('alt')
+    p.keyDown('f4')
+    p.keyUp('f4')
+    p.keyUp('alt')
+
+def cut():
+    """
+    this method presses ctrl+x of the virtual key board.
+    """
+    p.keyDown('ctrl')
+    p.keyDown('x')
+    p.keyUp('x')
+    p.keyUp('ctrl')
+
+def copy():
+    """
+    this method presses ctrl+c of the virtual key board.
+    """
+    p.keyDown('ctrl')
+    p.keyDown('c')
+    p.keyUp('c')
+    p.keyUp('ctrl')
+
+def paste():
+    """
+    this method presses ctrl+v of the virtual key board.
+    """
+    p.keyDown('ctrl')
+    p.keyDown('v')
+    p.keyUp('v')
+    p.keyUp('ctrl')
+
+def enter():
+    p.press('\n')
+
+def F5():
+    p.press('f5')
+
+def backspace():
+    p.press('\b')
+
+def pageup():
+    p.press('pageup')
+
+def pagedown():
+    p.press('pagedown')
+
+def left():
+    p.press('left')
+
+def right():
+    p.press('right')
+
+def up():
+    p.press('up')
+
+def down():
+    p.press('down')
+
+def home():
+    p.press('home')
+
+def end():
+    p.press('end')
+
+def tab():
+    p.press('\t')
+
+

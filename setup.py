@@ -8,13 +8,13 @@ from setuptools import setup
 setup(
     name='SG-remote',
     version='1.0.0',
-    url='https://github.com/girish946/SG-remote',
+    url='https://github.com/Slightgen/SG-remote',
     author='girish joshi',
     author_email='girish946@gmail.com',
     description=('interface for ir remote controllers provided with slight-gen minicomp'
                  'operate the desktop using ir remote'),
     license='GPLV3',
-    packages=[''],
+    packages=['remote'],
     test_suite='',
     install_requires=['pyautogui', 'python-lirc'],
     keywords="operate mate-desktop ir-remote-controller",
@@ -29,4 +29,5 @@ setup(
         'Programming Language :: Python',
         'Programming Language :: Python :: 2.7',
     ],
+    scripts=['r-controller']
 )

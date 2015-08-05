@@ -1,0 +1,9 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+from remote.r_controller import start
+
+if __name__ == '__main__':
+    start()
+
+
