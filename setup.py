@@ -16,7 +16,7 @@ setup(
     license='GPLV3',
     packages=['remote'],
     test_suite='',
-    install_requires=['pyautogui', 'python-lirc'],
+    install_requires=['pyautogui', 'python-lirc' , 'clipboard'],
     keywords="operate mate-desktop ir-remote-controller",
     classifiers=[
         'Development Status :: 3 - Alpha',

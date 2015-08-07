@@ -3,11 +3,20 @@
 
 import pyautogui as p
 from threading import Thread
+import clipboard
 import os
 
 def showShutdown():
     
     os.system('mate-session-save --shutdown-dialog')
+
+def notify(message):
+    """
+    this method shows the notification.
+    """
+    os.system('notify-send "SG-remote" "{0}" \
+           -t 2000'.format(message))
+
 
 def run(program , *arg):
     pid = os.fork()
@@ -22,6 +31,7 @@ def power():
     this method minimizes all the windows and shows the shutdown
     dialog box.
     """
+    notify('pressed power')
     show_desktop()
     t = Thread(target= showShutdown)
     t.start()
@@ -35,6 +45,7 @@ def fileviewer():
         here in this case the default filemanager is caja.
         so this will start caja at /media/
     """
+    notify('opening fileviewer at /media/')
     program = 'caja'
     arg =  '/media/'
     run(program , arg)
@@ -44,6 +55,7 @@ def show_desktop():
     this method minimizes all the opened windows and will show
     the desktop.
     """
+    #notify('show desktop')
     p.keyDown('alt')
     p.keyDown('ctrl')
     p.keyDown('d')
@@ -56,6 +68,7 @@ def alt_tab():
     this method takes the control to the previously 
     opened window.
     """
+    #notify('switch window')
     p.keyDown('alt')
     p.keyDown('shift')
     p.keyDown('\t')
@@ -76,6 +89,7 @@ def cut():
     """
     this method presses ctrl+x of the virtual key board.
     """
+    notify('cut '+ clipboard.paste())
     p.keyDown('ctrl')
     p.keyDown('x')
     p.keyUp('x')
@@ -85,6 +99,7 @@ def copy():
     """
     this method presses ctrl+c of the virtual key board.
     """
+    notify('copy '+ clipboard.paste())
     p.keyDown('ctrl')
     p.keyDown('c')
     p.keyUp('c')
@@ -94,10 +109,20 @@ def paste():
     """
     this method presses ctrl+v of the virtual key board.
     """
+    notify('paste '+ clipboard.paste())
     p.keyDown('ctrl')
     p.keyDown('v')
     p.keyUp('v')
     p.keyUp('ctrl')
+
+def startup_menu():
+    """
+    this method shows the startup menu....
+    """
+    p.keyDown('alt')
+    p.keyDown('f1')
+    p.keyUp('f1')
+    p.keyUp('alt')
 
 def enter():
     p.press('\n')
@@ -135,4 +160,5 @@ def end():
 def tab():
     p.press('\t')
 
-
+def escape():
+    p.press('escape')
