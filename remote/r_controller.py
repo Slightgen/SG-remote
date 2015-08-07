@@ -7,7 +7,7 @@ import commands
 
 import lirc
 import sys
-
+import os
 
 prev = datetime.now().microsecond
 current =datetime.now().microsecond
@@ -19,9 +19,11 @@ available = ['power' ,'fileviewer' ,'show_desktop' ,\
               'alt_tab' ,'enter' ,'F5' ,'close' ,'cut' ,\
               'copy' ,'paste' ,'backspace' ,'pageup' ,\
               'pagedown' ,'left' ,'right' ,'up','down' ,\
-              'escape', 'home' ,'end' ,'tab']
+              'escape', 'home' ,'end' ,'tab' ,'startup_menu',]
 
 sockid = lirc.init("remote")
+
+commands.notify("started")
 
 def start():
     """
