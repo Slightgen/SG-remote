@@ -15,7 +15,7 @@ def notify(message):
     this method shows the notification.
     """
     os.system('notify-send "SG-remote" "{0}" \
-           -t 2000'.format(message))
+           -t 2000 -i ~/.slightgen/logo.png'.format(message))
 
 
 def run(program , *arg):
@@ -89,31 +89,31 @@ def cut():
     """
     this method presses ctrl+x of the virtual key board.
     """
-    notify('cut '+ clipboard.paste())
     p.keyDown('ctrl')
     p.keyDown('x')
     p.keyUp('x')
     p.keyUp('ctrl')
+    notify('cut '+ clipboard.paste())
 
 def copy():
     """
     this method presses ctrl+c of the virtual key board.
     """
-    notify('copy '+ clipboard.paste())
     p.keyDown('ctrl')
     p.keyDown('c')
     p.keyUp('c')
     p.keyUp('ctrl')
+    notify('copy '+ clipboard.paste())
 
 def paste():
     """
     this method presses ctrl+v of the virtual key board.
     """
-    notify('paste '+ clipboard.paste())
     p.keyDown('ctrl')
     p.keyDown('v')
     p.keyUp('v')
     p.keyUp('ctrl')
+    notify('paste '+ clipboard.paste())
 
 def startup_menu():
     """
@@ -128,7 +128,7 @@ def enter():
     p.press('\n')
 
 def F5():
-    p.press('f5')
+    p.press('f5 pressed')
 
 def backspace():
     p.press('\b')
@@ -161,4 +161,5 @@ def tab():
     p.press('\t')
 
 def escape():
+    notify('escape pressed')
     p.press('escape')
