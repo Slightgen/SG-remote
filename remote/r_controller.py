@@ -15,11 +15,11 @@ current =datetime.now().microsecond
 print("import success")
 print("ready")
 
-available = ['power' ,'fileviewer' ,'show_desktop' ,\
-              'alt_tab' ,'enter' ,'F5' ,'close' ,'cut' ,\
-              'copy' ,'paste' ,'backspace' ,'pageup' ,\
-              'pagedown' ,'left' ,'right' ,'up','down' ,\
-              'escape', 'home' ,'end' ,'tab' ,'startup_menu',]
+available = ['power', 'fileviewer', 'show_desktop',
+              'alt_tab', 'enter', 'F5' ,'close', 'cut',
+              'copy', 'paste', 'backspace', 'pageup',
+              'pagedown', 'left', 'right', 'up','down',
+              'escape', 'home', 'end', 'tab', 'startup_menu']
 
 sockid = lirc.init("remote")
 
