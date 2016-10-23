@@ -26,7 +26,7 @@ def exe_command(command):
 
 @app.route('/')
 def index():
-    return "hello"
+    return "SG-Remote_server_is_running"
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
